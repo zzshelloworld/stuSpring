@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--配置Bean的后置处理器-->
+    <bean id="beanPostProcessor" class="com.zhangzhe.springlifecycle.MyBeanPostProcessor">
+    </bean>
+
+    <!--配置instantiationAwareBeanPostProcessor-->
+    <bean id="instantiationAwareBeanPostProcessor" class="com.zhangzhe.springlifecycle.MyInstantiationAwareBeanPostProcessor">
+    </bean>
+
+    <!--配置BeanFactory的后置处理器-->
+    <bean id="beanFactoryPostProcessor" class="com.zhangzhe.springlifecycle.MyBeanFactoryPostProcessor">
+    </bean>
+
+    <bean id="studentBean" class="com.zhangzhe.springlifecycle.StudentBean" init-method="myInit"
+          destroy-method="myDestroy" scope="singleton">
+        <property name="name" value="yanxiao"></property>
+        <property name="age" value="21"></property>
+    </bean>
+</beans>
