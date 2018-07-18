@@ -7,12 +7,24 @@
     <groupId>com.2hang2he</groupId>
     <artifactId>stuSpring</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>6</source>
+                    <target>6</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
     <dependencies>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-            <version>3.1.1.RELEASE</version>
+            <version>5.0.0.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
