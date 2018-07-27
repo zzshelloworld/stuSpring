@@ -7,6 +7,7 @@ import java.io.IOException;
 
 public class TestAware {
     public static void main (String[] args) throws IOException {
+
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AwareConfig.class);
         AwareService service = context.getBean(AwareService.class);
         service.outputResult();
