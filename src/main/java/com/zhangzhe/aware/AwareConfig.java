@@ -1,4 +1,4 @@
-package com.zhangzhe.config;
+package com.zhangzhe.aware;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;

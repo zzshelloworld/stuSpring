@@ -1,5 +1,6 @@
-package com.zhangzhe.config;
+package com.zhangzhe.aware;
 
+import com.zhangzhe.aware.AwareConfig;
 import com.zhangzhe.aware.AwareService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
