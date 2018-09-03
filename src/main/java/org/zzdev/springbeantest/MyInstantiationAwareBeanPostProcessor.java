@@ -1,4 +1,4 @@
-package org.zzdev.springBeanTest;
+package org.zzdev.springbeantest;
 
 import java.beans.PropertyDescriptor;
 

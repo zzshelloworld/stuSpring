@@ -1,4 +1,4 @@
-package org.zzdev.springBeanTest;
+package org.zzdev.springbeantest;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
