@@ -30,7 +30,7 @@ public class SyncMethod {
 //        new Thread(()->t.m1(), "t1").start();
 //        new Thread(()->t.m2(), "t2").start();
 
-
+// new Thread方法的入参 是runnable 在这里面写一个runnable 匿名内部类，然后再重写runnable的run方法。在run方法中调用 t.m1()
 //		new Thread(new Runnable() {
 //
 //			@Override
