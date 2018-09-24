@@ -9,7 +9,9 @@ public class AtomicTry {
 
     void m(){
         for (int i = 0; i < 10000; i++) {
-            count.incrementAndGet();
+//            if (count.get() <200000)
+//            count.incrementAndGet();
+            count.set(count.get() + 1);
         }
     }
 
@@ -19,5 +21,15 @@ public class AtomicTry {
         for (int i = 0; i < 20; i++){
             threads.add(new Thread(t::m));
         }
+
+        threads.forEach(o -> o.start());
+        threads.forEach(o -> {
+            try {
+                o.join();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        });
+        System.out.println(t.count);
     }
 }
