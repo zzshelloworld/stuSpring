@@ -8,6 +8,8 @@ public class Singleton1 {
 
     public static Singleton1 getSin() {
         return sin;
+
+
     }
 
 }
