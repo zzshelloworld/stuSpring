@@ -54,6 +54,7 @@ class Mutex implements Lock, java.io.Serializable {
     public void lock() {
         sync.acquire(1);
     }
+    // acquire 实现的是synchronized 语义
 
     @Override
     public boolean tryLock() {
