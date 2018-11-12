@@ -1,5 +1,5 @@
 package org.zzdev.jvm;
-
+// https://mp.weixin.qq.com/s/VBbNm2N20DotmGYlSEBS8g
 public class StaticTest {
     public static void main(String[] args) {
         staticFunction();
@@ -25,9 +25,9 @@ public class StaticTest {
     }
 
     int a = 110;
-    static int b = 112;
+    final static int b = 112;
 
     // 对static 代码块不清楚
-    // 加载 连接 初始化
+    // 加载 连接(验证，准备，解析) 初始化 只有在准备阶段和初始化阶段进行 类变量的初始化和赋值
     // 3 a=110, b=0 4 1 2
 }
