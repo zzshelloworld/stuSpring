@@ -31,6 +31,7 @@ public class SychronizedThis {
         }
     }
 
+    // junit不支持多线程
     @Test
     public void mn() {
         SychronizedThis st = new SychronizedThis();

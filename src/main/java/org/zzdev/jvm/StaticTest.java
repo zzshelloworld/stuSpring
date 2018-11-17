@@ -1,5 +1,5 @@
 package org.zzdev.jvm;
-// https://mp.weixin.qq.com/s/VBbNm2N20DotmGYlSEBS8g
+// https://mp.weixin.qq.com/s/VBbNm2N20DotmGYlSEBS8g  https://blog.csdn.net/u013256816/article/details/50829596
 public class StaticTest {
     public static void main(String[] args) {
         staticFunction();

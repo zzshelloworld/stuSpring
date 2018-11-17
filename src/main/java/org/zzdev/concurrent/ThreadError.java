@@ -23,6 +23,13 @@ public class ThreadError {
 
     public static void main(String[] args) {
         ThreadError t = new ThreadError();
+        Runnable r = new Runnable() {
+            @Override
+            public void run() {
+                t.m();
+            }
+        };
+
         new Thread(t::m, "t1").start();
         try {
             TimeUnit.SECONDS.sleep(3);
