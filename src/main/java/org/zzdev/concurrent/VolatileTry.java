@@ -1,7 +1,7 @@
 package org.zzdev.concurrent;
 
 import java.util.concurrent.TimeUnit;
-// 区别不明显
+// volatile 会强制去堆内存中去读取值。
 public class VolatileTry {
     volatile boolean running = true;
 

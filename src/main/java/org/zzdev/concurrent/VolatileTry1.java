@@ -21,9 +21,16 @@ public class VolatileTry1 {
             threads.add(new Thread(t::m, "thread-" + i));
         }
         // 这个地方为什么分开写
-        threads.forEach(o->o.start());
+        threads.forEach(o -> {
+            o.start();
+//            try {
+//                o.join();
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
+        });
 
-        threads.forEach(o-> {
+        threads.forEach(o -> {
             try {
                 o.join();
             } catch (InterruptedException e) {

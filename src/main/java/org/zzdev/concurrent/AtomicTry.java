@@ -10,8 +10,8 @@ public class AtomicTry {
     void m(){
         for (int i = 0; i < 10000; i++) {
 //            if (count.get() <200000)
-//            count.incrementAndGet();
-            count.set(count.get() + 1);
+            count.incrementAndGet();
+//            count.set(count.get() + 1);
         }
     }
 

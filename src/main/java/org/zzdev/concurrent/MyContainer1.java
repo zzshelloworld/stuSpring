@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class MyContainer1 {
+    // 注意注释 volatile,和不注释 volatile
     private volatile List array = new ArrayList();
 
     void add(Object o) {
