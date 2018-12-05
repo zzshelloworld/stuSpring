@@ -42,3 +42,6 @@ class NotInitialization
         System.out.println(SubClass.value);
     }
 }
+
+// 加载 连接（验证，准备，）初始化
+//

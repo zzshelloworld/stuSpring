@@ -18,8 +18,9 @@ public class TicketSeller2 {
         for (int i = 0; i < 10; i++) {
             new Thread(() -> {
                 while (list.size() > 0) {
+                    // 判断和remove分离了，加上时间的间隔，来模拟判断中间被打断。
                     try {
-                        TimeUnit.SECONDS.sleep(10);
+                        TimeUnit.MILLISECONDS.sleep(10);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
