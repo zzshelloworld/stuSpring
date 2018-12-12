@@ -23,6 +23,12 @@ public class SubListFailFast {
         branchList.add("seven");
         branchList.remove(0);
 
+        for (Object t : branchList) {
+            System.out.println(t);
+        }
+
+        System.out.println(masterList);
+
 
     }
 }
