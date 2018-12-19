@@ -19,7 +19,7 @@ import java.nio.charset.*;
  * @version 1.0
  */
 public class NServer {
-    // 用于检测所有Channel状态的Selector
+    // 用于检测所有Channel状态的Selector, 这个是SelectableChannel的多路复用器
     private Selector selector = null;
     static final int PORT = 30000;
     // 定义实现编码、解码的字符集对象
@@ -48,7 +48,7 @@ public class NServer {
                     SocketChannel sc = server.accept();
                     // 设置采用非阻塞模式
                     sc.configureBlocking(false);
-                    // 将该SocketChannel也注册到selector
+                    // 将该SocketChannel也注册到selector，  注意是这个sc
                     sc.register(selector, SelectionKey.OP_READ);
                     // 将sk对应的Channel设置成准备接受其他请求
                     sk.interestOps(SelectionKey.OP_ACCEPT);
